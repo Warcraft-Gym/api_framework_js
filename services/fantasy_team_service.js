@@ -1,4 +1,4 @@
-import FantasyTeam from '../model/FantasyTeam.js';
+import FantasyTeam from '../model/fantasy_team.js';
 import BaseGNLBackendService from './base_service.js';
 
 class FantasyTeamService extends BaseGNLBackendService {

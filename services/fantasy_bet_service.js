@@ -1,4 +1,4 @@
-import FantasyBet from '../model/FantasyBet.js';
+import FantasyBet from '../model/fantasy_bet.js';
 import BaseGNLBackendService from './base_service.js';
 
 class FantasyBetService extends BaseGNLBackendService {
