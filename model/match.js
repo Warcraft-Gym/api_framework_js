@@ -1,6 +1,6 @@
-import Team from './team.js';
-import Season from './season.js';
-import Map from './map.js';
+import { Team } from './team.js';
+import { Season } from './season.js';
+import { Map } from './map.js';
 
 class Match {
     constructor(data = {}) {

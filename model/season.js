@@ -1,4 +1,4 @@
-import Map from './map.js';
+import {Map} from './map.js';
 
 class Season {
     constructor(data = {}) {

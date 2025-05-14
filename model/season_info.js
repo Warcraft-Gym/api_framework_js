@@ -1,4 +1,4 @@
-import Season from './season.js';
+import {Season} from './season.js';
 
 class SeasonInfo {
     constructor(data = {}) {

@@ -1,5 +1,5 @@
-import User from './user.js';
-import Match from './match.js';
+import {User} from './user.js';
+import {Match} from './match.js';
 
 
 class Series {

@@ -1,6 +1,6 @@
-import Team from './team.js';
-import User from './user.js';
-import Season from './season.js';
+import { Team } from './team.js';
+import { User } from './user.js';
+import {Season} from './season.js';
 
 class FantasyTeam {
     constructor(data = {}) {
