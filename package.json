@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "GNL API Framework for Discord bots",
   "main": "index.js",
+  "type":"module",
   "scripts": {
     "test": "echo \"No test specified\" && exit 0"
   },
