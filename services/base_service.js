@@ -87,7 +87,7 @@ class BaseGNLBackendService {
     if (search_str) {
       query = {'query':search_str};
     }
-    return this.sendRequest(BaseGNLBackendService.HTTPMethods.POST, endpoint, data, { Authorization: `Bearer ${this.token}`}, query);
+    return this.sendRequest(BaseGNLBackendService.HTTPMethods.POST, endpoint, null, { Authorization: `Bearer ${this.token}`}, query);
   }
 
   async put(endpoint, data = {}) {
