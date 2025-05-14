@@ -6,45 +6,45 @@ class FantasyTeam {
     constructor(data = {}) {
         this.id = data.id || null;
         this.name = data.name || '';
-        this.seasonId = data.season_id || null;
+        this.season_id = data.season_id || null;
         this.season = data.season ? new Season(data.season) : null;
-        this.captainId = data.captain_id || null;
+        this.captain_id = data.captain_id || null;
         this.captain = data.captain ? new User(data.captain) : null;
-        this.draftedTeamId = data.drafted_team_id || null;
-        this.draftedTeam = data.drafted_team ? new Team(data.drafted_team) : null;
-        this.draftedRace = data.drafted_race || '';
-        this.draftedPlayers = Array.isArray(data.drafted_players) ? data.drafted_players.map(player => new User(player)) : [];
-        this.playerPoints = data.player_points || 0;
-        this.benchPoints = data.bench_points || 0;
-        this.teamPoints = data.team_points || 0;
-        this.racePoints = data.race_points || 0;
-        this.betPoints = data.bet_points || 0;
-        this.totalPoints = data.total_points || 0;
+        this.drafted_team_id = data.drafted_team_id || null;
+        this.drafted_team = data.drafted_team ? new Team(data.drafted_team) : null;
+        this.drafted_race = data.drafted_race || '';
+        this.drafted_players = Array.isArray(data.drafted_players) ? data.drafted_players.map(player => new User(player)) : [];
+        this.player_points = data.player_points || 0;
+        this.bench_points = data.bench_points || 0;
+        this.team_points = data.team_points || 0;
+        this.race_points = data.race_points || 0;
+        this.bet_points = data.bet_points || 0;
+        this.total_points = data.total_points || 0;
     }
 
     toObject() {
         return {
             id: this.id,
             name: this.name,
-            seasonId: this.seasonId,
-            captainId: this.captainId,
-            draftedTeamId: this.draftedTeamId,
-            draftedRace: this.draftedRace,
-            playerPoints: this.playerPoints,
-            benchPoints: this.benchPoints,
-            teamPoints: this.teamPoints,
-            racePoints: this.racePoints,
-            betPoints: this.betPoints,
-            totalPoints: this.totalPoints
+            season_id: this.season_id,
+            captain_id: this.captain_id,
+            drafted_team_id: this.drafted_team_id,
+            drafted_race: this.drafted_race,
+            player_points: this.player_points,
+            bench_points: this.bench_points,
+            team_points: this.team_points,
+            race_points: this.race_points,
+            bet_points: this.bet_points,
+            total_points: this.total_points
         };
     }
 
     toString() {
-        const draftedPlayersStr = this.draftedPlayers.length ? this.draftedPlayers.map(player => player.toString()).join(', ') : 'None';
-        return `FantasyTeam(id=${this.id}, name=${this.name}, captain=${this.captain}, draftedTeam=${this.draftedTeam}, ` +
-               `draftedPlayers=[${draftedPlayersStr}], draftedRace=${this.draftedRace}, season=${this.season}, ` +
-               `playerPoints=${this.playerPoints}, benchPoints=${this.benchPoints}, teamPoints=${this.teamPoints}, ` +
-               `racePoints=${this.racePoints}, betPoints=${this.betPoints}, totalPoints=${this.totalPoints})`;
+        const drafted_playersStr = this.drafted_players.length ? this.drafted_players.map(player => player.toString()).join(', ') : 'None';
+        return `FantasyTeam(id=${this.id}, name=${this.name}, captain=${this.captain}, drafted_team=${this.drafted_team}, ` +
+               `drafted_players=[${drafted_playersStr}], drafted_race=${this.drafted_race}, season=${this.season}, ` +
+               `player_points=${this.player_points}, bench_points=${this.bench_points}, team_points=${this.team_points}, ` +
+               `race_points=${this.race_points}, bet_points=${this.bet_points}, total_points=${this.total_points})`;
     }
 }
 

@@ -7,7 +7,7 @@ class User {
         this.race = data.race || '';
         this.mmr = data.mmr || null;
         this.country = data.country || '';
-        this.fantasyTier = data.fantasy_tier || null;
+        this.fantasy_tier = data.fantasy_tier || null;
     }
 
     toObject() {
@@ -18,14 +18,14 @@ class User {
             race: this.race,
             mmr: this.mmr,
             country: this.country,
-            fantasyTier: this.fantasyTier
+            fantasy_tier: this.fantasy_tier
         };
     }
 
     toString() {
         return `User(id=${this.id}, name=${this.name}, battleTag=${this.battleTag}, ` +
                `discordTag=${this.discordTag}, race=${this.race}, mmr=${this.mmr}, ` +
-               `country=${this.country}, fantasyTier=${this.fantasyTier})`;
+               `country=${this.country}, fantasy_tier=${this.fantasy_tier})`;
     }
 }
 

@@ -4,25 +4,25 @@ class Season {
     constructor(data = {}) {
         this.id = data.id || null;
         this.name = data.name || '';
-        this.numberWeeks = data.number_weeks || null;
-        this.seriesPerWeek = data.series_per_week || null;
-        this.pickBan = data.pick_ban || null;
+        this.number_weeks = data.number_weeks || null;
+        this.series_per_week = data.series_per_week || null;
+        this.pick_ban = data.pick_ban || null;
         this.maps = Array.isArray(data.maps) ? data.maps.map(map => new Map(map)) : [];
     }
 
     toObject() {
         return {
             name: this.name,
-            numberWeeks: this.numberWeeks,
-            pickBan: this.pickBan,
-            seriesPerWeek: this.seriesPerWeek
+            number_weeks: this.number_weeks,
+            pick_ban: this.pick_ban,
+            series_per_week: this.series_per_week
         };
     }
 
     toString() {
         const mapsStr = this.maps.length ? this.maps.join(', ') : 'None';
-        return `Season(id=${this.id}, name=${this.name}, numberWeeks=${this.numberWeeks}, ` +
-               `seriesPerWeek=${this.seriesPerWeek}, pickBan=${this.pickBan}, maps=${mapsStr})`;
+        return `Season(id=${this.id}, name=${this.name}, number_weeks=${this.number_weeks}, ` +
+               `series_per_week=${this.series_per_week}, pick_ban=${this.pick_ban}, maps=${mapsStr})`;
     }
 }
 
