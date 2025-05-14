@@ -1,5 +1,5 @@
 import Match from '../model/match.js';
-import BaseGNLBackendService from './BaseGNLBackendService.js';
+import BaseGNLBackendService from './base_service.js';
 
 class MatchService extends BaseGNLBackendService {
     async getMatch(matchId) {

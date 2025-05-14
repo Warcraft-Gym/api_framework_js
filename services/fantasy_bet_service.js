@@ -1,5 +1,5 @@
 import FantasyBet from '../model/FantasyBet.js';
-import BaseGNLBackendService from './baseGNLBackendService.js';
+import BaseGNLBackendService from './base_service.js';
 
 class FantasyBetService extends BaseGNLBackendService {
     async getFantasyBet(betId) {

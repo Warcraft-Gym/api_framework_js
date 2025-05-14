@@ -1,5 +1,5 @@
 import Series from '../model/series.js';
-import BaseGNLBackendService from './BaseGNLBackendService.js';
+import BaseGNLBackendService from './base_service.js';
 
 class SeriesService extends BaseGNLBackendService {
     async getSeries(seriesId) {

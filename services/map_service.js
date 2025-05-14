@@ -1,5 +1,5 @@
 import Map from '../model/map.js';
-import BaseGNLBackendService from './BaseGNLBackendService.js';
+import BaseGNLBackendService from './base_service.js';
 
 class MapService extends BaseGNLBackendService {
     async searchMaps(searchString) {

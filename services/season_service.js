@@ -1,5 +1,5 @@
 import Season from '../model/season.js';
-import BaseGNLBackendService from './BaseGNLBackendService.js';
+import BaseGNLBackendService from './base_service.js';
 
 class SeasonService extends BaseGNLBackendService {
     async getSeason(seasonId) {

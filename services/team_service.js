@@ -1,5 +1,5 @@
 import Team from '../model/team.js';
-import BaseGNLBackendService from './BaseGNLBackendService.js';
+import BaseGNLBackendService from './base_service.js';
 
 class TeamService extends BaseGNLBackendService {
     async getTeam(teamId) {

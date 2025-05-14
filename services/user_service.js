@@ -1,5 +1,5 @@
 import User from '../model/user.js';
-import BaseGNLBackendService from './BaseGNLBackendService.js';
+import BaseGNLBackendService from './base_service.js';
 
 class UserService extends BaseGNLBackendService {
     async getUserByDiscord(discordName) {

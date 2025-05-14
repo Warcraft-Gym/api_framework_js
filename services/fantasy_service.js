@@ -1,5 +1,4 @@
-import FantasyTeam from '../model/FantasyTeam.js';
-import BaseGNLBackendService from './BaseGNLBackendService.js';
+import BaseGNLBackendService from './base_service.js';
 
 class FantasyService extends BaseGNLBackendService {
     async calculateSeason(seasonId) {

@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export class BaseService {
+export class BaseGNLBackendService {
   async sendRequest({ method, url, data = null, headers = {}, params = {} }) {
     try {
       const response = await axios({
