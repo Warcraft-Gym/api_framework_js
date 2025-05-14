@@ -1,5 +1,5 @@
-import {User} from './user.js';
-import {Match} from './match.js';
+import User from './user.js';
+import Match from './match.js';
 
 
 class Series {
@@ -47,3 +47,6 @@ class Series {
                `hostPlayerId=${this.hostPlayerId}, isFantasyMatch=${this.isFantasyMatch})`;
     }
 }
+
+
+export default Series;

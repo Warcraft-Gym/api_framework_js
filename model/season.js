@@ -1,4 +1,4 @@
-import {Map} from './map.js';
+import Map from './map.js';
 
 class Season {
     constructor(data = {}) {
@@ -25,3 +25,5 @@ class Season {
                `seriesPerWeek=${this.seriesPerWeek}, pickBan=${this.pickBan}, maps=${mapsStr})`;
     }
 }
+
+export default Season;

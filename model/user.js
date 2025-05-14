@@ -28,3 +28,5 @@ class User {
                `country=${this.country}, fantasyTier=${this.fantasyTier})`;
     }
 }
+
+export default User;

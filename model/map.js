@@ -19,3 +19,5 @@ class Map {
         return `Map(id=${this.id}, name=${this.name}, shortname=${this.shortname}, image=${this.image})`;
     }
 }
+
+export default Map;

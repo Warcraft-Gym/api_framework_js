@@ -1,4 +1,4 @@
-import {Season} from './season.js';
+import Season from './season.js';
 
 class SeasonInfo {
     constructor(data = {}) {
@@ -15,3 +15,4 @@ class SeasonInfo {
                `season=${this.season})`;
     }
 }
+export default SeasonInfo;

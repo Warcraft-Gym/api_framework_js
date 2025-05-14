@@ -1,5 +1,5 @@
-import {User} from './user.js';
-import {SeasonInfo} from './season_info.js';
+import User from './user.js';
+import SeasonInfo from './season_info.js';
 
 class Team {
     constructor(data = {}) {
@@ -41,3 +41,6 @@ class Team {
                `playersBySeason={${playersBySeasonStr}}, seasonsInfo=[${seasonsInfoStr}])`;
     }
 }
+
+
+export default Team;

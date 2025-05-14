@@ -1,6 +1,6 @@
-import {User} from './user.js';
-import {Season} from './season.js';
-import {Series} from './series.js';
+import User from './user.js';
+import Season from './season.js';
+import Series from './series.js';
 
 class FantasyBet {
     constructor(data = {}) {
