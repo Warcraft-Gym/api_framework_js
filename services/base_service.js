@@ -76,9 +76,18 @@ class BaseGNLBackendService {
     return this.sendRequest(BaseGNLBackendService.HTTPMethods.GET, endpoint, null, {}, params);
   }
 
-  async post(endpoint, data = {}) {
+  async post(endpoint, data = null) {
     await this.ensureValidToken();
     return this.sendRequest(BaseGNLBackendService.HTTPMethods.POST, endpoint, data, { Authorization: `Bearer ${this.token}` });
+  }
+
+  async search(endpoint, search_str = null) {
+    await this.ensureValidToken();
+    let query = null;
+    if (search_str) {
+      query = {'query':search_str};
+    }
+    return this.sendRequest(BaseGNLBackendService.HTTPMethods.POST, endpoint, data, { Authorization: `Bearer ${this.token}`}, query);
   }
 
   async put(endpoint, data = {}) {
