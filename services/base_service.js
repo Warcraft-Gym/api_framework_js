@@ -59,12 +59,19 @@ class BaseGNLBackendService {
         throw new Error(`Login failed, token not retrieved: ${response}`);
       }
     } else {
-      const response = await this.sendRequest(BaseGNLBackendService.HTTPMethods.POST, "/refresh", null, { Authorization: `Bearer ${this.refreshToken}` });
-      if (response?.access_token) {
-        this.token = response.access_token;
-      } else {
-        throw new Error(`Login failed, token not retrieved: ${response}`);
+      try{
+        const response = await this.sendRequest(BaseGNLBackendService.HTTPMethods.POST, "/refresh", null, { Authorization: `Bearer ${this.refreshToken}` });
+        if (response?.access_token) {
+          this.token = response.access_token;
+        } else {
+          throw new Error(`Login failed, token not retrieved: ${response}`);
+        }
+      } catch (error) {
+        console.error("Could not refresh token, retry login: ", error);
+        this.refreshToken = null;
+        await this.login();
       }
+      
     }
   }
 
